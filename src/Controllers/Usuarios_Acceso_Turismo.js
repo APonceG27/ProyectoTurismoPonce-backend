@@ -15,7 +15,7 @@ const Obtener_Todos_Los_Usuarios_Turismo = (req, res)=>
 const Validar_Credenciales_Usuario = (req, res) =>{
     
     const {correo, password} = req.body;
-    const todos_Los_Usuarios = accesoDatos.Obtener_Todos_Los_Usuarios_Turismo();
+    const todos_Los_Usuarios = accesoDatos.Obtener_Todos_Los_Usuarios();
 
     const usuarioEncontrado = todos_Los_Usuarios.find(u => u.correo === correo
                                                     && u.password === password);
